@@ -1,0 +1,141 @@
+
+.navbar {
+    width: 15%; /* Navigation bar taking 10% of the screen width */
+    max-width: 1in; /* Maximum width of 1 inch */
+    height: 100vh; /* Full height of the viewport */
+    display: flex;
+    flex-direction: column; /* Vertical alignment */
+    align-items: center;
+    justify-content: start;
+    background-color: #245d78; /* Background matching Celtic knot */
+    padding: 15px 0; /* Vertical padding */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    z-index: 10; /* Ensure the menu stays above the borderimg */
+    position: fixed; /* Fixed position to stay on top */
+    left: 0; /* Position navbar on the left */
+    top: 0; /* Align to the top */
+  }
+  .menu-toggle {
+    display: none; /* Initially hide the hamburger icon */
+    cursor: pointer;
+    flex-direction: column;
+    z-index: 10;
+    align-items: center;
+    margin-bottom: 20px; /* Space between menu-toggle and menu */
+  }
+  
+  .bar {
+    width: 25px; /* Width of each bar */
+    height: 3px; /* Height of each bar */
+    background-color: #fff; /* White color for bars */
+    margin: 4px 0; /* Space between bars */
+
+  }
+  
+  .menu {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Vertical menu items */
+    width: 100%; /* Full width of the nav bar */
+  }
+  
+  .menu li {
+    width: 100%; /* Full width of the menu */
+  }
+  
+  .menu img {
+    width: 40px; /* Adjust logo size */
+    height: auto; /* Maintain aspect ratio */
+  }
+  .admin-portal-li {
+    margin-top: auto; /* Push the admin portal to the bottom */
+    margin-left: 0;
+    
+  }
+  
+.logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Space between logo and menu */
+  }
+  
+  .logo img {
+    height: 70px; /* Adjust logo size */
+  }
+  #close-menu-li {
+    display: none; /* Hide the close button by default */
+  }
+  
+.menu a {
+    text-decoration: none; /* Remove underline from links */
+    color: #fff; /* White text color */
+    font-weight: bold; /* Bold text for menu items */
+    padding: 8px 15px; /* Padding for clickable area */
+    border-radius: 4px; /* Rounded corners for menu items */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    display: block; /* Block display for full width */
+    text-align: center; /* Center text */
+    z-index: 10;
+  }
+  
+  /* Hover Effect for Menu Links */
+  .menu a:hover {
+    background-color: #ffcc33; /* Gold color on hover */
+    color: #00000a; /* Black text on hover */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow for text */
+  }
+  /* Media Queries for Responsive Design */
+  @media screen and (max-width: 768px) {
+    .navbar {
+      width: 100%; /* Full width on smaller screens */
+      height: auto; /* Auto height for content */
+      padding: 15px; /* Reduced padding */
+      position: absolute; /* Position navbar above the content */
+      top: 0;
+      left: 0;
+      z-index: 10; /* Ensure the menu stays above the borderimg */
+    }
+  
+    #close-menu-li {
+      display: flex; /* Show the close button on smaller screens */
+    }
+  
+    .menu {
+      display: none; /* Hide the menu by default on smaller screens */
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0; /* Align with the left edge of the screen */
+      background-color: #324463;
+      width: 100%; /* Full width on small screens */
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      z-index: 10;
+    }
+  
+    .menu.show {
+      display: flex; /* Show menu when toggled */
+    }
+  
+    .menu-toggle {
+      display: flex; /* Show the hamburger icon */
+    }
+  
+    .menu li {
+      margin: 0;
+    }
+  
+    .menu a {
+      display: block;
+      padding: 10px;
+      text-align: left;
+      z-index: 10;
+    }
+  
+    .bar {
+      background-color: #fff; /* Ensure the bars are white on small screens */
+      z-index: 8;
+    }
+  }
+  

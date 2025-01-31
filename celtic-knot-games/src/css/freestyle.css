@@ -1,0 +1,138 @@
+#borderimg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url('../Visual assets/Gemini_Generated_Image_in1uumin1uumin1u.jpg') no-repeat center center / cover;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Ensure it's behind other content */
+    overflow: auto; /* Allow scrolling if needed */
+    pointer-events: none; /* Prevent it from capturing mouse events */
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between; /* Space between settings and branding */
+    align-items: center; /* Center the content vertically */
+    background-color: rgba(242, 242, 242, 0.9); /* Slight transparency to see the background image */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    position: relative; /* Ensures it stays above the background */
+    z-index: 1; /* Ensures it stays above the background */
+    overflow: auto; /* Allow scrolling if needed */
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-wrap: nowrap; /* Ensure elements do not wrap to next line */
+}
+
+.settings {
+    text-align: center;
+    width: 45%; /* Adjust as needed */
+    background-color: #d3d3d3; /* Grey color */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative
+}
+
+.branding {
+    width: 45%; /* Adjust as needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.welcome-text {
+    margin-bottom: 10px; /* Add some spacing between text and logo */
+    color: blue; /* Set welcome text color to blue */
+    text-align: center;
+}
+
+.large-logo {
+    width: 300px; /* Fixed width */
+    height: 300px; /* Fixed height */
+    object-fit: contain; /* Ensure it fits within the dimensions without distortion */
+}
+
+.slider-container {
+    margin: 10px 0;
+}
+
+.slider-container input[type=range] {
+    width: 100%;
+}
+
+.radio-container {
+    margin: 10px 0;
+}
+
+.start-game-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+    pointer-events: auto; /* Ensure it's clickable */
+    z-index: 10; /* Ensure it's above background */
+}
+
+.start-game-button:hover {
+    background-color: #ffcc33; /* Gold color on hover */
+    color: #00000a; /* Black text on hover */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow for text */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack items vertically */
+        height: 100vh; /* Ensure full viewport height */
+        overflow-y: auto; /* Allow vertical scrolling */
+    }
+
+    .content {
+        flex-direction: column; /* Stack the columns vertically on small screens */
+    }
+
+    .settings {
+        width: 100%; /* Take up full width on small screens */
+        margin-bottom: 20px; /* Add bottom margin for spacing */
+        margin-top: 100px; /* Add top margin for spacing */
+    }
+
+    .branding {
+        width: 100%; /* Take up full width on small screens */
+        margin-bottom: 20px; /* Add bottom margin for spacing */
+    }
+}

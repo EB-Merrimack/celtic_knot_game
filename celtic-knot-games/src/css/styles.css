@@ -1,0 +1,40 @@
+/* For images, please take the visual assets folder in the src of the repo and save where your repo is cloned */
+
+#borderimg {
+  display: flex; /* Use flexbox for alignment */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  flex-direction: column; /* Stack children vertically */
+  background: url('../Visual assets/Gemini_Generated_Image_in1uumin1uumin1u.jpg') no-repeat center center / cover;
+  width: calc(100% - 10%); /* Adjusted width considering navbar width */
+  height: 100vh;  /* Full height of the device */
+  z-index: -1; /* Ensure the border is below the navbar */
+  position: absolute; /* Required for z-index to work */
+  left: 10%; /* Position right of navbar */
+  top: 0; /* Align to the top */
+}
+
+/* Ensure favicon displays correctly on different devices */
+@media (max-width: 600px) {
+  /* Favicon for smaller screens */
+  link[rel="icon"] {
+      width: 16px;
+      height: 16px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1200px) {
+  /* Favicon for medium screens */
+  link[rel="icon"] {
+      width: 32px;
+      height: 32px;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* Favicon for larger screens */
+  link[rel="icon"] {
+      width: 48px;
+      height: 48px;
+  }
+}

@@ -1,0 +1,22 @@
+---
+title: "knot data"
+author: "Emily Brown"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+
+```{r}
+library(tidyr)    # pivot_wider and pivot_longer are in this library
+library(dplyr)    # our data wrangling verbs come from this library
+library(readr) #this library reads .csv files
+library(knitr)#for table formating
+library(mosaic) #for totals
+library(readxl)
+library("writexl")
+
+```
+
+```{r}
+knot_info<-read_excel("knotinfo_data_complete.xls")
+```
