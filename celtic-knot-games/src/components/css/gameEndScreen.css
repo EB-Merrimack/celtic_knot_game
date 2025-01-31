@@ -1,0 +1,105 @@
+.game-end-screen {
+    background-color: rgba(155, 155, 155, 0.7);
+    position: fixed;
+    margin: 0px;
+    padding: 0px;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    z-index: 10;
+}
+
+.game-end-screen_green h1 {
+    color: green;
+}
+
+.game-end-screen_red h1 {
+    color: red;
+}
+
+.game-end-screen_gray h1 {
+    color: black;
+}
+
+.ges-results-display {
+    background-color: rgba(242, 242, 242, 1);
+    width: 50vw;
+    min-height: 50vh;
+    height: fit-content;
+    max-height: 80vh;
+    position: relative;
+    left: 0.5in;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    overflow-y: auto;
+}
+
+.ges-tab-container {
+    display: flex;
+    margin-bottom: -1px;
+}
+
+.ges-tab {
+    padding: 0.75em 1.5em;
+    border-radius: 0.5em 0.5em 0em 0em;
+    border: 1px solid gray;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 1em;
+    background: linear-gradient(gray 0 0) bottom/ 0% 2px no-repeat #fff; /* Start hidden */
+    transition: background-size 400ms ease-in-out, background-color 250ms ease-in;
+    background-color: #cdcdcd;
+}
+
+.ges-active-tab {
+    background: linear-gradient(gray 0 0) bottom/ 60% 2px no-repeat #fff;
+    border-bottom: none;
+}
+
+.ges-tab-content {
+    padding: 1em;
+    border: 1px solid gray;
+    border-radius: 4px;
+    border-top-left-radius: 0px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    height: 50vh;
+    overflow-y: auto;
+}
+
+.ges-button-container {
+    display: flex; /* Enable flexbox */
+    justify-content: space-evenly; /* Evenly space the buttons */
+    align-items: center; /* Center the buttons vertically */
+    padding: 10px; /* Optional: Add some padding for spacing */
+}
+
+.ges-button {
+    padding: 10px 20px; /* Optional: Style the buttons for better appearance */
+    font-size: 16px; /* Optional: Adjust font size */
+    cursor: pointer; /* Optional: Add a pointer cursor */
+}
+
+#snapshot-container {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.game-snapshot {
+    width: 80%;
+    max-width: 400px;
+}
+
+@media (max-width: 768px) {
+    .ges-results-display {
+        left: 0;
+    }
+}

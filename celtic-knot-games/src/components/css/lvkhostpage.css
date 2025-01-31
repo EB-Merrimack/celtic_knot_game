@@ -1,0 +1,206 @@
+
+
+/* General styling for body and html */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Container styling */
+.lvkhostcontainer{
+    height: 80vh;
+    display: flex;
+    flex-direction: column; /* Always stack items vertically */
+    justify-content: center; /* Center the content vertically */
+    align-items: center; /* Center the content horizontally */
+    background-color: rgba(242, 242, 242, 0.9); /* Slight transparency to see the background image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative; /* Ensures it stays above the background */
+    z-index: 1; /* Ensures it stays above the background */
+    padding: 20px 0px;
+}
+
+/* Remain block style for ease of formatting */
+.lvkhosttext {
+    text-align: center;
+    overflow-y: auto;
+    width: 100%;
+    height: 100%;
+    padding-top: 40px;
+}
+
+/* Branding panel styling */
+.welcome-text {
+    margin-bottom: 10px; /* Add some spacing between text and logo */
+    color: blue; /* Set welcome text color to blue */
+    text-align: center;
+}
+
+/* Button container styling */
+.button-container {
+    margin: 20px 0;
+}
+
+/* Option button styling */
+.option-button {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.option-button:hover {
+    background-color: #ffcc33; /* Gold color on hover */
+    color: #00000a; /* Black text on hover */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow for text */
+}
+
+/* Back button styling */
+.go-back-button {
+    margin-bottom: 5px; /* Align to the right of the content container */
+    width: fit-content;
+    align-self: flex-start;
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 10; /* Ensure it stays on top */
+}
+
+.go-back-button:hover {
+    background-color: #ffcc33; /* Gold color on hover */
+    color: #00000a; /* Black text on hover */
+}
+
+/* Game code container styling */
+.game-code-container {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.game-code {
+    font-weight: bold;
+    color: #333;
+}
+
+.copy-button {
+    padding: 5px 10px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.copy-button:hover {
+    background-color: #ffcc33; /* Gold color on hover */
+    color: #00000a; /* Black text on hover */
+}
+
+/* Status container styling */
+.status-container {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.status {
+    font-weight: bold;
+}
+
+.status.connected {
+    color: green;
+}
+
+.status.disconnected {
+    color: red;
+}
+
+/* Play options container styling */
+.playoptions-container {
+    margin: 20px 0;
+}
+
+.option {
+    margin: 10px 0;
+}
+
+/* Tooltip styling */
+
+
+.tooltip:hover::after {
+    content: attr(title); /* Use the title attribute for tooltip content */
+    position: absolute;
+    background: #fff;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    top: 20px;
+    left: 0;
+    width: 200px;
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}/* Tooltip styling */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.tooltip .question-mark-circle {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: blue;
+    color: white;
+    text-align: center;
+    line-height: 20px;
+    font-size: 14px;
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+
+.tooltip:hover::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #fff transparent;
+    z-index: 10;
+}
+
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px; /* Ensure padding is consistent */
+    }
+
+    .content {
+        padding: 20px; /* Ensure padding is consistent */
+    }
+
+    .button-container {
+        width: 100%; /* Take up full width on small screens */
+        margin-bottom: 20px; /* Add bottom margin for spacing */
+    }
+}

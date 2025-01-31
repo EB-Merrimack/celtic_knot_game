@@ -1,0 +1,136 @@
+.page-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row; /* Align items horizontally */
+    justify-content: flex-start; /* Align items to the left */
+    align-items: flex-start; /* Align items to the top */
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+.iframe-container {
+    margin-top: 20px;
+    position: relative;
+}
+
+
+.options-container {
+    width: 300px; /* Fixed width for options container */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    padding: 20px;
+    background-color: rgba(242, 242, 242, 0.9); /* Slight transparency to see the background image */
+    margin-right: 20px; /* Space between options and moves */
+    text-align: left;
+    box-sizing: border-box;
+    z-index: 2; /* Ensure it stays above other content */
+    height: 80vh;
+    overflow-y: auto;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    gap: 20px; /* Gap between rows */
+    z-index: 2; /* Ensure it stays above other content */
+    height: 80vh;
+    width: 40vw;
+}
+
+.large-logo {
+    width: 150px; /* Adjust size as needed */
+    height: 150px; /* Adjust size as needed */
+    border-radius: 50%; /* Make the logo circular */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    margin-bottom: 20px;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    width: 100%;
+    margin-bottom: 20px; /* Add space below options to prevent overlap */
+}
+
+.option-button {
+    align-self: center;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: blue; /* Button color */
+    color: white; /* Text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.option-button:hover {
+    background-color: #ffcc33; /* Gold color on hover */
+    color: #00000a; /* Black text on hover */
+}
+
+.moves-container {
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto; /* Enable scrolling if content overflows */
+    background-color: rgba(240, 240, 240, 0.9); /* Slight transparency for better contrast */
+    border-radius: 5px;
+    max-height: 40vh;
+    width: 100%;
+}
+
+.moves-display {
+    padding: 10px;
+    background-color: #e0e0e0; /* Light background for moves display */
+    border-radius: 5px;
+    min-height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#canvasContainer {
+    height: 50vh;
+    width: 100%;
+    text-align: center;
+    display: flex;
+}
+
+#gameCanvas {
+    margin: 0px;
+    padding: 0px;
+}
+
+@media (max-width: 768px) {
+    .page-container {
+        flex-direction: column; /* Stack options and moves vertically */
+        align-items: center; /* Center align items */
+        max-height: 80vh;
+        width: 80vw;
+    }
+
+    .options-container {
+        width: 100%;
+        margin-right: 0;
+        min-height: 80vh;
+    }
+
+    .large-logo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .option-button {
+        width: 100%;
+    }
+
+    .game-container {
+        width: 100%;
+    }
+}

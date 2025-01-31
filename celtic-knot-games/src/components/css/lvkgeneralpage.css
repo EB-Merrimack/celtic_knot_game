@@ -1,0 +1,26 @@
+/* Styles applied to every lvk page (except welcome) */
+.lvk-App {
+    display: flex;
+    justify-content: flex-end;
+    left: 1in;
+    position: absolute;
+    top: 0;
+    width: calc(100% - 1in);
+}
+
+.lvk-content-container {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.lvk-header {
+    display: block;
+    width: 80%;
+}
+
+.lvk-content {
+    max-width: 600px;
+    margin: auto;
+}

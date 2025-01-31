@@ -1,0 +1,68 @@
+/* General styling for the help page container */
+#help-page-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh; /* Full viewport height */
+    padding: 10px;
+    overflow: hidden; /* Prevent body overflow */
+}
+
+#help-page-container {
+    width: 80%;
+    max-width: 1000px; /* Max width for content */
+    height: 100%; 
+    padding: 20px;
+    background-color: #f4f4f4; /* Light background for readability */
+    overflow-y: auto; /* Enable scrolling */
+    box-sizing: border-box;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#help-page-container h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Ensure the manual content is scrollable */
+.manual-content {
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    max-height: 85vh; /* Restrict height to 85% of the viewport */
+    overflow-y: auto; /* Enable scrolling inside the content */
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+/* Optional: Add styles for links, images, and other elements inside the manual */
+.manual-content a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.manual-content a:hover {
+    text-decoration: underline;
+}
+
+/* Ensure no overflow in body */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Add mobile responsiveness */
+@media (max-width: 768px) {
+    #help-page-container {
+        padding: 15px;
+    }
+
+    #help-page-container h1 {
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,80 @@
+/* WelcomeCarousel.css */
+.carousel .description {
+    color: black; /* Text color */
+    padding: 10px; /* Adjust padding */
+    border-radius: 5px; /* Rounded corners */
+    text-align: center; /* Center the text */
+    max-width: 90%; /* Ensure the legend does not overflow */
+    margin: 10px auto; /* Center the legend */
+    background: rgba(242, 242, 242, 0.8); /* Light background for contrast */
+}
+
+.carousel .control-dots .dot {
+    background: black; /* Black dots */
+}
+
+.carousel-item {
+    padding: 10px; /* Padding for the carousel item */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carousel-header {
+    display: flex;
+    align-items: center; /* Vertical centering */
+    justify-content: center; /* Horizontal centering */
+    margin-bottom: 10px; /* Space below the header */
+    padding: 10px; /* Padding around the header */
+    background: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+    border-radius: 5px; /* Rounded corners */
+    max-width: 100%; /* Ensure it doesn't overflow the container */
+    word-wrap: break-word; /* Allow word wrapping */
+}
+
+.tiny-icon {
+    width: 30px; /* Smaller icon size */
+    height: auto;
+    margin-right: 10px; /* Space between the icon and text */
+}
+
+.carousel img {
+    max-height: 200px; /* Adjust the height for the carousel images */
+    width: auto;
+    margin: 10px auto; /* Space above and below the image */
+    object-fit: contain; /* Maintain aspect ratio */
+}
+
+.carousel h2 {
+    font-size: 1.5em; /* Adjust the font size */
+    margin: 0; /* Remove default margin */
+    padding: 10px 0; /* Add padding for spacing */
+    text-align: center; /* Center the text */
+}
+
+.carousel h3 {
+    font-size: 1.2em; /* Adjust the font size */
+    margin: 0; /* Remove default margin */
+    padding: 10px 0; /* Add padding for spacing */
+    text-align: center; /* Center the text */
+}
+
+.custom-carousel {
+    width: 100%; /* Set carousel width to 100% to make it responsive */
+    max-height: 400px; /* Maximum height for the carousel */
+    overflow-y: hidden; /* Disable vertical scrolling */
+}
+
+/* Media Query for Smaller Screens */
+@media screen and (max-width: 768px) {
+    .carousel img {
+        max-height: 150px; /* Adjust the height for smaller screens */
+    }
+    .carousel h2 {
+        font-size: 1.2em; /* Adjust the font size for smaller screens */
+    }
+    .carousel h3 {
+        font-size: 1em; /* Adjust the font size for smaller screens */
+        display: none;
+    }
+}

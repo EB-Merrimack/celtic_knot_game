@@ -1,0 +1,136 @@
+/* lvkgameplaypage.css */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+.page-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row; /* Align items horizontally */
+    justify-content: space-between; /* Align items to the left */
+    align-items: flex-start; /* Align items to the top */
+    z-index: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    gap: 20px; /* Gap between rows */
+    z-index: 2; /* Ensure it stays above other content */
+    height: 80vh;
+    width: 40vw;
+}
+
+.gameStatus-container {
+    width: 300px; /* Fixed width for options container */
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: rgba(242, 242, 242, 0.9); /* Slight transparency to see the background image */
+    margin-left: 20px; /* Space between game status and board */
+    align-items: flex-start;
+    text-align: left;
+    box-sizing: border-box;
+    z-index: 2; /* Ensure it stays above other content */
+    height: 80vh;
+    overflow-y: auto;
+    margin-top: 0px;
+}
+
+.gameStatus-container h1 {
+    font-size: 1.7em;
+    color: black;
+    align-self: center;
+    text-align: center;
+}
+
+.gameStatus-container h2 {
+    font-size: 1.3em;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.displayBox {
+    box-sizing: border-box;
+    width: 50%;
+    min-width: fit-content;
+    align-self: center;
+    font-weight: bold;
+    font-size: 1.3em;
+    padding: 10px;
+    margin: 0px;
+    text-align: center;
+}
+
+.currMove_green {
+    color: green;
+    background-color: lightgreen;
+    border: solid green;
+}
+
+.currMove_red {
+    color: red;
+    background-color: pink;
+    border: solid red;
+}
+
+.currMove_gray {
+    color: #222222;
+    background-color: lightgray;
+    border: solid #222222;
+}
+
+.breakCount {
+    width: 20%;
+    background-color: white;
+    border: solid;
+}
+
+.emptyBreakCount {
+    width: 20%;
+    background-color: lightgray;
+    border: solid;
+}
+
+#canvasContainer {
+    height: 50vh;
+    width: 100%;
+    text-align: center;
+    display: flex;
+}
+
+#gameCanvas {
+    margin: 0px;
+    padding: 0px;
+}
+
+@media (max-width: 768px) {
+    .game-container {
+        width: 100%;
+    }
+
+    .page-container {
+        flex-direction: column; /* Stack options and moves vertically */
+        align-items: center; /* Center align items */
+        max-height: 80vh;
+        width: 80vw;
+    }
+
+    .gameStatus-container {
+        width: 80%;
+        margin-left: 0px;
+        min-height: 80vh;
+    }
+}

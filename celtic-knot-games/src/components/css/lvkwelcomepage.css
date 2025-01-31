@@ -1,0 +1,77 @@
+
+/* General styling for body and html */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    justify-content: center;
+    align-items: center;
+}
+
+.lvkscroll {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Content styling */
+.lvktext {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    width: 80%;
+    /* text-align: center; /* Center text alignment */
+}
+
+/* Button container styling */
+.button-container {
+    margin: 10px 0; /* Reduced margin */
+    display: flex;
+    width: 100%; /* Ensure the container takes full width */
+}
+
+/* Branding panel styling */
+.welcome-text {
+    margin: 10px 0; /* Reduce top and bottom margin */
+    padding: 0; /* Remove padding */
+    color: blue; /* Set welcome text color to blue */
+    width: 100%; /* Ensure the heading takes full width */
+}
+
+/* Option button styling */
+.option-button {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.option-button:hover {
+    background-color: #ffcc33; /* Gold color on hover */
+    color: #00000a; /* Black text on hover */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow for text */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .lvkscroll {
+        width: 90%; /* Adjust width for smaller screens */
+        max-width: none; /* No maximum width */
+        padding: 20px; /* Ensure padding is consistent */
+    }
+
+    .lvktext {
+        padding: 20px; /* Ensure padding is consistent */
+    }
+
+    .button-container {
+        width: 100%; /* Take up full width on small screens */
+        margin-bottom: 20px; /* Add bottom margin for spacing */
+    }
+}

@@ -1,0 +1,25 @@
+#admin-portal {
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 250px; /* Increased height slightly */
+    width: 320px; /* Adjust width */
+}
+
+#shield-logo {
+    width: 120px; /* Slightly increased size */
+    margin-bottom: 20px;
+    cursor: pointer; /* Ensure it's clickable */
+}
+
+.login-shield-button {
+    width: 60px; /* Adjust button size */
+    height: auto;
+    margin-top: 20px;
+}

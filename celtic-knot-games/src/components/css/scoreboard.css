@@ -1,0 +1,61 @@
+.scoreboard-container {
+    width: 200px;
+    height: 100vh;
+    background-color: #e0e0e0;
+    padding-top: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-left: 2px solid #ccc;
+    overflow-y: auto;
+    z-index: 10;
+}
+
+.scoreboard-title {
+    font-size: 32px;
+    margin: 10px 0;
+    text-align: center;
+    color: #004d40;
+    /* Teal color */
+}
+
+.scoreboard-subtitle {
+    font-size: 28px;
+    margin: 10px 0;
+    text-align: center;
+    color: #004d40;
+}
+
+.scoreboard-section {
+    width: 100%;
+    text-align: center;
+}
+
+.scoreboard-section-title {
+    font-size: 24px;
+    margin-bottom: 0px;
+    color: #004d40;
+}
+
+.scoreboard-players {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.scoreboard-player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 18px;
+    color: #004d40;
+    width: 50%;
+}
+
+@media (max-width: 700px) {
+    .scoreboard-container {
+        visibility: hidden;
+        position: fixed;
+    }
+}
